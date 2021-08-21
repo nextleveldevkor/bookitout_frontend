@@ -2,7 +2,7 @@ const searchForm = document.querySelector(".col-lg-7");
 const searchInput = document.querySelector("input");
 const parentDiv = document.querySelector(".item-container");
 const pageTitle = document.querySelector(".page-title");
-const loading = document.querySelector("#loading");
+const loading = document.querySelector(".loading-image");
 const HIDDEN_CLASSNAME = "hidden";
 
 function createSearchBooks(data) {
