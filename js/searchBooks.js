@@ -1,6 +1,6 @@
 const searchForm = document.querySelector(".col-lg-7");
 const searchInput = document.querySelector("input");
-const parentDiv = document.querySelector(".item-container");
+let parentDiv = document.querySelector(".item-container");
 const pageTitle = document.querySelector(".page-title");
 const loading = document.querySelector(".loading-image");
 const HIDDEN_CLASSNAME = "hidden";
@@ -9,7 +9,7 @@ function clickBook(e) {
   const parent = e.target.parentElement.parentElement;
   const link = parent.lastChild.lastChild.innerHTML;
   const title = parent.lastChild.firstChild.innerHTML;
-  const author = parent.lastChild.childNodes[3].innerHTML;
+  const author = parent.lastChild.childNodes[1].innerHTML;
   const imgLink = parent.firstChild.firstChild.getAttribute("src");
   localStorage.setItem("link", link);
   localStorage.setItem("title", title);
@@ -29,9 +29,10 @@ function createSearchBooks(data) {
   imageDiv.setAttribute("class", "col-4__image");
 
   const img = document.createElement("img");
-  if (data.img_link === "No Image")
-    img.setAttribute("src", "images/Book-Image-Default.png");
-  else img.setAttribute("src", data.img_link);
+  // if (data.img_link === "No Image")
+  //   img.setAttribute("src", "images/Book-Image-Default.png");
+  // else img.setAttribute("src", data.img_link);
+  img.setAttribute("src", "images/Book-Image-Default.png");
   img.setAttribute("alt", "book-image");
   img.setAttribute("class", "book-image");
 
@@ -46,19 +47,18 @@ function createSearchBooks(data) {
   libraryCount.innerHTML = `고려대학교 도서관 소장 자료 <span class="search-library-num">${data.available}</span> 권`;
   const dbCount = document.createElement("p");
   dbCount.innerHTML = `북키라웃 등록 매물 <span class="search-db-num">${data.count}</span> 권`;
-  const bookLink = document.createElement("p");
-  bookLink.innerHTML = data.link;
-  bookLink.setAttribute("class", "hidden");
+  // const bookLink = document.createElement("p");
+  // bookLink.innerHTML = data.link;
+  // bookLink.setAttribute("class", "hidden");
 
   const author = document.createElement("p");
   author.innerHTML = data.author;
-  author.setAttribute("class", "hidden");
 
   textDiv.appendChild(bookTitle);
+  textDiv.appendChild(author);
   textDiv.appendChild(libraryCount);
   textDiv.appendChild(dbCount);
-  textDiv.appendChild(author);
-  textDiv.appendChild(bookLink);
+  // textDiv.appendChild(bookLink);
 
   hyperlink.appendChild(imageDiv);
   hyperlink.appendChild(textDiv);
@@ -91,18 +91,35 @@ function compareResults(arr1, arr2) {
   return arr2;
 }
 
+function displayResults(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    arr[i].available = 0;
+  }
+  return arr;
+}
+
 const url = `http://localhost:8000/libraries/`;
 const url2 = `http://localhost:8000/products/search/?title__contains=`;
 
-function getBooksDB(title, library) {
+// function getBooksDB(title, library) {
+function getBooksDB(title) {
+  deleteChildren();
+  pageTitle.innerHTML = "";
+  loading.classList.remove(HIDDEN_CLASSNAME);
   const new_title = title.replace(/ /g, "%20");
   fetch(url2 + new_title)
     .then((response) => response.json())
     .then((data) => {
-      const finalRes = compareResults(data, library);
+      // const finalRes = compareResults(data, library);
+      // finalRes.forEach(function (item) {
+      //   createSearchBooks(item);
+      // });
+      const finalRes = displayResults(data);
       finalRes.forEach(function (item) {
         createSearchBooks(item);
       });
+      loading.classList.add(HIDDEN_CLASSNAME);
+      pageTitle.innerHTML = `도서명 <span class="search-title">${title}</span> 로 검색한 결과`;
     });
 }
 
@@ -129,9 +146,10 @@ function getBooks(title) {
     });
 }
 
-async function submitForm(e) {
+function submitForm(e) {
   e.preventDefault();
-  getBooks(searchInput.value);
+  getBooksDB(searchInput.value);
+  searchInput.value = "";
 }
 
 searchForm.addEventListener("submit", submitForm);

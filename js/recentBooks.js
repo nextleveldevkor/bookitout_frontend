@@ -25,7 +25,9 @@ function createBooks(data) {
   const author = document.createElement("p");
   author.innerHTML = data.author;
   const edition = document.createElement("p");
-  edition.innerHTML = data.edition;
+  edition.innerHTML = `edition : ${data.edition}`;
+  const condition = document.createElement("p");
+  condition.innerHTML = `condition : ${data.condition}/5`;
   const price = document.createElement("p");
   price.innerHTML = data.price;
   const contact = document.createElement("p");
@@ -34,6 +36,7 @@ function createBooks(data) {
   textDiv.appendChild(bookTitle);
   textDiv.appendChild(author);
   textDiv.appendChild(edition);
+  textDiv.appendChild(condition);
   textDiv.appendChild(price);
   textDiv.appendChild(contact);
 
