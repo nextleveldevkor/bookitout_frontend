@@ -2,16 +2,55 @@
   display: flex;
   justify-content: space-between;
 }*/
+.detail-screen__text {
+}
 .bookitout-koreaLibrary {
+  padding-top: 20px;
   display: flex;
   justify-content: center;
 }
 .bookitout-koreaLibrary div {
-  width: 100px;
+  width: 300px;
 }
 .bookitout-check {
-  width: 100px;
+  width: 300px;
 }
 .koreaLibrary-check {
-  width: 100px;
+  width: 300px;
+}
+.put-selling-information {
+  margin-top: 15px;
+}
+.click-the-button {
+  font-size: 70px;
+  width: 77px;
+  border-radius: 35px;
+  background-color: gray;
+  border: gray;
+  color: white;
+}
+/*.button-position {
+  display: flex;
+  margin-left: 50px;
+}
+*/
+.bookitout-row {
+  margin: 7px 0px;
+  padding: 10px;
+  border: 1px solid #e1e0f1;
+  background-color: #e1e0f1;
+  border-radius: 20px;
+}
+.korea-library-book {
+  margin: 7px 0px;
+  padding: 10px;
+  border: 1px solid #d9e5eb;
+  background-color: #d9e5eb;
+  border-radius: 20px;
+}
+.bookitout-check {
+  margin-right: 10px;
+}
+.koreaLibrary-check {
+  margin-left: 10px;
 }
