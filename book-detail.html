@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book-detailpage | BookItOut</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -23,19 +29,24 @@
       <div class="navbar">
         <div class="logo">
           <a href="index.html">
-            <img src="bookitout-logo.png" alt="bookitout-Logo" />
+            <img src="images/bookitout-logo.png" alt="bookitout-Logo" />
           </a>
         </div>
         <!----------  Nav Bar ------------------>
         <nav>
           <ul id="MenuItems">
-              <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="ebooks.html">Search</a></li>
             <li><a href="#">Notice</a></li>
             <li><a href="#">Help</a></li>
+            <li><a href="#">Log in</a></li>
           </ul>
         </nav>
-        <img src="https://i.pinimg.com/736x/ee/c0/71/eec071442e9a1b8e017c5a7c1853b880.jpg" class="menu-icon" onclick="menutoggle()" />
+        <img
+          src="https://i.pinimg.com/736x/ee/c0/71/eec071442e9a1b8e017c5a7c1853b880.jpg"
+          class="menu-icon"
+          onclick="menutoggle()"
+        />
       </div>
     </div>
 
@@ -170,6 +181,7 @@
         <p class="copyright">Copyright 2020 - EbookStore</p>
       </div>
     </div>
+
     <!-- ---------Javascript for toggle menu------------- -->
     <script>
       var MenuItems = document.getElementById("MenuItems");
