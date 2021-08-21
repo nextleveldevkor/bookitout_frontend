@@ -5,6 +5,10 @@ const pageTitle = document.querySelector(".page-title");
 const loading = document.querySelector(".loading-image");
 const HIDDEN_CLASSNAME = "hidden";
 
+function clickBook(e) {
+  console.log(e.target.parentElement.parentElement);
+}
+
 function createSearchBooks(data) {
   const container = document.createElement("div");
   container.setAttribute("class", "col-3");
@@ -36,6 +40,7 @@ function createSearchBooks(data) {
   hyperlink.appendChild(textDiv);
 
   container.appendChild(hyperlink);
+  container.addEventListener("click", clickBook);
   parentDiv.appendChild(container);
 }
 

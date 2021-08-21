@@ -36,10 +36,9 @@ function createBooks(data) {
   textDiv.appendChild(price);
   textDiv.appendChild(contact);
 
-  hyperlink.appendChild(imageDiv);
-  hyperlink.appendChild(textDiv);
+  container.appendChild(imageDiv);
+  container.appendChild(textDiv);
 
-  container.appendChild(hyperlink);
   parentDiv.appendChild(container);
 }
 
