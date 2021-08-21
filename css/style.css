@@ -2,6 +2,7 @@
 @import "home.css";
 @import "book-detail.css";
 @import "footer.css";
+
 * {
   margin: 0;
   padding: 0;

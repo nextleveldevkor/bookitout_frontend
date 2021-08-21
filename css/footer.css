@@ -5,5 +5,10 @@
 .footer-col3-between {
   padding-top: 15px;
 }
-.footer-col-4 {
+.footer {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
 }
