@@ -51,14 +51,14 @@
       </div>
     </div>
     <div class="search-container">
-      <form action="#" method="get" class="col-lg-7">
+      <form class="col-lg-7">
         <input
           type="search"
           name="q"
           id="search"
           placeholder="도서명을 입력하세요"
         />
-        <button type="button" class="btn">
+        <button type="submit" class="btn">
           <span class="glyphicon glyphicon-search"></span> Search
         </button>
       </form>
@@ -72,8 +72,10 @@
           <h5>찾으시는 도서가 없다면?</h5>
           <a>추가하기</a>
         </div>
-        
+    
       </div>
+
+      <div class="hidden" id="loading">Loading...</div>
 
       <div class="row item-container">
       </div>
@@ -140,5 +142,6 @@
     </script>
     <!--<script src="js/col-4.js"></script>-->
     <script src='./js/recentBooks.js'></script>
+    <script src='./js/searchBooks.js'></script>
   </body>
 </html>
