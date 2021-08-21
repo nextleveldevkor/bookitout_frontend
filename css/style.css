@@ -35,29 +35,27 @@ a {
 p {
   color: #555;
 }
-
+.search-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.if-no-book {
+  width: 200px;
+}
+.if-no-book h5 {
+  display: inline;
+}
+.page-title {
+  margin-left: 100px;
+}
 .row {
   flex-wrap: wrap;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
-.col-2 {
-  flex-basis: 50%;
-  min-width: 300px;
-  margin-left: 150px;
-  margin-right: 150px;
-}
-.col-2 img {
-  max-width: 100%;
-  padding: 50px 0;
-}
-.col-2 h1 {
-  color: white;
-  font-size: 50px;
-  line-height: 60px;
-  margin: 25px 0px;
-}
+
 .btn {
   display: inline-block;
   background: #ff523b;
@@ -80,19 +78,24 @@ p {
   margin: 70px 0;
 }
 .col-3 {
-  flex-basis: 30%;
+  flex-basis: 70%;
   min-width: 250px;
   margin-bottom: 30px;
   max-width: 280px;
-  height: 400px;
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 600px;
+  transition: all 0.2s;
+}
+
+.col-3:hover {
+  transform: scale(1.05);
 }
 .col-3 img {
   width: 100%;
 }
 .small-container {
-  max-width: 1080px;
   margin: auto;
-
   padding-left: 25px;
   padding-right: 25px;
 }
@@ -165,7 +168,7 @@ small {
 }
 .col-3 p {
   font-size: 12px;
-  margin: 12px 0;
+  margin: 7px 0;
   color: #777;
 }
 .testimonial .col-3 h3 {
@@ -274,9 +277,8 @@ ul {
 /* -------------------All Ebooks--------------------------- */
 .row-2 {
   justify-content: space-between;
-  margin: 50px auto 50px;
+  margin-bottom: 30px;
   align-content: flex-end;
-  margin-left: -70px;
 }
 select {
   border: 1px solid #ff523b;
@@ -424,7 +426,7 @@ th:last-child {
   transition: 1s;
 }
 form input {
-  width: 100%;
+  width: 40vw;
   height: 30px;
   margin: 10px 0;
   padding: 0 10px;
