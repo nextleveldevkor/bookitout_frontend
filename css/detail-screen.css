@@ -1,4 +1,17 @@
-.detail-screen {
+/*.detail-screen {
   display: flex;
   justify-content: space-between;
+}*/
+.bookitout-koreaLibrary {
+  display: flex;
+  justify-content: center;
+}
+.bookitout-koreaLibrary div {
+  width: 100px;
+}
+.bookitout-check {
+  width: 100px;
+}
+.koreaLibrary-check {
+  width: 100px;
 }
