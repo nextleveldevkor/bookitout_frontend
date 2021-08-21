@@ -84,6 +84,11 @@ p {
   margin-left: 100px;
   margin-right: 100px;
   height: 600px;
+  transition: all 0.2s;
+}
+
+.col-3:hover {
+  transform: scale(1.05);
 }
 .col-3 img {
   width: 100%;
