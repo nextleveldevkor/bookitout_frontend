@@ -93,6 +93,10 @@ p {
 
 .hover-div {
   height: 500px;
+  transition: all 0.2s;
+}
+.hover-div:hover {
+  transform: scale(1.05);
 }
 
 .hover-image {

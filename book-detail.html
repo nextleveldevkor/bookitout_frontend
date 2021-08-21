@@ -18,11 +18,40 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <style type="text/css">
-
-      html,body {height:100%,margin:0}
-      .mw {position:fixed;_position:absolute;top:0;left:0;width:100%;height:100%;display:none;}
-      .mw .bg {position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:.5;filter:alpha(opacity=50)}
-      .mw .fg {position:absolute;top:50%;left:50%;width:360px;margin:-100px 0 0 -200px;padding:20px;border:3px solid #ccc;background:#fff;}
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .mw {
+        position: fixed;
+        _position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+      .mw .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+      }
+      .mw .fg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 360px;
+        margin: -100px 0 0 -200px;
+        padding: 20px;
+        border: 3px solid #ccc;
+        background: #fff;
+      }
     </style>
   </head>
 
@@ -57,38 +86,22 @@
     <div class="small-container single-product">
       <div class="row detail-screen">
         <div class="col-2">
-          <img src="images/Book 16.jpg" alt="Book4" width="100%" />
+          <img alt="detail-book-image" width="100%" class="detail-book-image" />
         </div>
         <div class="col-2 detail-screen__text">
           <div>
             <div class="detail-screen__title">
-              <h1>Introduction to International Economics</h1>
-              <h6>저자 Dominick, Salvatore</h6>
+              <h1 class="detail-book-title"></h1>
+              <h6 class="detail-book-author"></h6>
             </div>
             <div class="bookitout-koreaLibrary">
               <div class="bookitout-check">
-                <h3>북키라웃 등록 매물 3권</h3>
-                <div class="bookitout-row">
-                  <h6>판 사항</h6>
-                  <h6>상태</h6>
-                  <h6>판매가</h6>
-                  <h6>연락</h6>
-                </div>
-                <div class="bookitout-row">
-                  <h6>판 사항</h6>
-                  <h6>상태</h6>
-                  <h6>판매가</h6>
-                  <h6>연락</h6>
-                </div>
-                <div class="bookitout-row">
-                  <h6>판 사항</h6>
-                  <h6>상태</h6>
-                  <h6>판매가</h6>
-                  <h6>연락</h6>
-                </div>
+                <h3 class="bookitout-detail-num">북키라웃 등록 매물 권</h3>
               </div>
               <div class="koreaLibrary-check">
-                <h3>고려대학교 도서관 소장 자료 5권</h3>
+                <h3 class="library-detail-num">
+                  고려대학교 도서관 소장 자료 권
+                </h3>
                 <div class="korea-library-book">
                   <h6>No. 1</h6>
                   <h6>소장처</h6>
@@ -130,30 +143,45 @@
         <div>
           <h2>Used Book to Sell?</h2>
           <div class="put-selling-information">
-            <div>
-              <h6>Edition, Version</h6>
-              <form>
-                <input type="text" name="edition" style="width: 300px" />
-              </form>
-            </div>
-            <div>
-              <h6>Condition (/5)</h6>
-              <form>
-                <input type="text" name="condition" style="width: 300px" />
-              </form>
-            </div>
-            <div>
-              <h6>Selling Price (won)</h6>
-              <form>
-                <input type="text" name="price" style="width: 300px" />
-              </form>
-            </div>
-            <div>
-              <h6>How to Contact</h6>
-              <form>
-                <input type="url" name="contact" style="width: 300px" />
-              </form>
-            </div>
+            <form class="add-at-detail">
+              <div>
+                <h6>Edition, Version</h6>
+                <input
+                  type="text"
+                  class="edition"
+                  style="width: 300px"
+                  required
+                />
+              </div>
+              <div>
+                <h6>Condition (/5)</h6>
+                <input
+                  type="text"
+                  class="condition"
+                  style="width: 300px"
+                  required
+                />
+              </div>
+              <div>
+                <h6>Selling Price (won)</h6>
+                <input
+                  type="text"
+                  class="price"
+                  style="width: 300px"
+                  required
+                />
+              </div>
+              <div>
+                <h6>How to Contact</h6>
+                <input
+                  type="text"
+                  class="contact"
+                  style="width: 300px"
+                  required
+                />
+              </div>
+              <button type="submit">Submit</button>
+            </form>
           </div>
         </div>
         <button
@@ -220,5 +248,7 @@
         }
       }
     </script>
+    <script src="js/detailBooks.js"></script>
+    <script src="js/addBookAtDetail.js"></script>
   </body>
 </html>
