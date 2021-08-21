@@ -12,6 +12,9 @@
 
   display: none;
 }
+.hidden {
+  display: none;
+}
 .col-4 {
   flex-basis: 25%;
   padding: 10px;

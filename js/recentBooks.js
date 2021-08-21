@@ -1,5 +1,3 @@
-let books;
-
 function createBooks(data) {
   const parentDiv = document.querySelector(".item-container");
 
@@ -50,7 +48,6 @@ function getData() {
     .then((response) => response.json())
     .then((data) =>
       data.results.forEach(function (item) {
-        console.log(item);
         createBooks(item);
       })
     );
