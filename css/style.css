@@ -84,17 +84,41 @@ p {
   margin-bottom: 30px;
   max-width: 280px;
   margin-left: 100px;
-  margin-right: 100px;
   height: 600px;
-  transition: all 0.2s;
 }
 
-.col-3:hover {
-  transform: scale(1.05);
-}
 .col-3 img {
   width: 100%;
 }
+
+.hover-div {
+  height: 500px;
+}
+
+.hover-image {
+  transition: all 0.2s;
+}
+
+.hover-image:hover {
+  transform: scale(1.05);
+}
+
+.search-title {
+  color: #ad84c6;
+}
+.search-library-num {
+  color: #6997af;
+}
+.search-db-num {
+  color: #ad84c6;
+}
+.book-image {
+  min-width: 200px;
+  min-height: 320px;
+  max-width: 200px;
+  max-height: 320px;
+}
+
 .small-container {
   margin: auto;
   padding-left: 25px;
