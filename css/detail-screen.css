@@ -1,0 +1,4 @@
+.detail-screen {
+  display: flex;
+  justify-content: space-between;
+}
