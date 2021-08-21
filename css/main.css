@@ -35,11 +35,6 @@
   position: relative;
 }
 .col-lg-7 {
-  display: flex;
   margin: 10px 40px;
-  position: absolute;
   flex-wrap: wrap;
-}
-.col-lg-7 input {
-  width: 1000px;
 }
