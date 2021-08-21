@@ -11,8 +11,9 @@ function createBooks(data) {
   imageDiv.setAttribute("class", "col-4__image");
 
   const img = document.createElement("img");
-  img.setAttribute("src", "images/Book 4.jpg");
-  img.setAttribute("alt", "Book 4");
+  img.setAttribute("src", "images/Book-Image-Default.png");
+  img.setAttribute("alt", "book-image");
+  img.setAttribute("class", "book-image");
 
   imageDiv.appendChild(img);
 
