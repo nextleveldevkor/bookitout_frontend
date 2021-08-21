@@ -50,25 +50,29 @@
     
       </div>
     </div>
-    <form action="#" method="get" class="col-lg-7">
-      <input
-        type="search"
-        name="q"
-        id="search"
-        placeholder="도서명을 입력하세요"
-      />
-      <button type="button" class="btn">
-        <span class="glyphicon glyphicon-search"></span> Search
-      </button>
-    </form>
+    <div class="search-container">
+      <form action="#" method="get" class="col-lg-7">
+        <input
+          type="search"
+          name="q"
+          id="search"
+          placeholder="도서명을 입력하세요"
+        />
+        <button type="button" class="btn">
+          <span class="glyphicon glyphicon-search"></span> Search
+        </button>
+      </form>
+    </div>
+    
 
     <div class="small-container">
-      <div class="row row-2">
-        <h2>최근 등록된 매물</h2>
+      <div class="row row-2 search">
+        <h2 class="page-title">최근 등록된 매물</h2>
         <div class="if-no-book">
           <h5>찾으시는 도서가 없다면?</h5>
+          <a>추가하기</a>
         </div>
-        <a>추가하기</a>
+        
       </div>
 
       <div class="row">
@@ -130,8 +134,6 @@
             <p>북키라웃 등록 매물 권수</p>
           </div>
         </div>
-      </div>
-      <div class="row">
         <div class="col-3">
           <div class="col-4__image">
             <a href="book-detail.html">
@@ -190,8 +192,6 @@
             <p>북키라웃 등록 매물 권수</p>
           </div>
         </div>
-      </div>
-      <div class="row">
         <div class="col-3">
           <div class="col-4__image">
             <a href="book-detail.html">
@@ -250,7 +250,11 @@
             <p>북키라웃 등록 매물 권수</p>
           </div>
         </div>
+
       </div>
+      
+      
+  
       <!-- ---------------------Youtube Video------------------- -->
 
       <!--page button -->
