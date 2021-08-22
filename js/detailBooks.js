@@ -35,7 +35,7 @@ function createLibraryBook(item) {}
 function getBookDetailDB() {
   const new_title = title.innerHTML.replace(/ /g, "%20");
   const new_author = author.innerHTML.replace(/ /g, "%20");
-  const urlDB = `http://127.0.0.1:8000/products/search/details/?title=${new_title}&author=${new_author}`;
+  const urlDB = `http://101.101.210.22:8000/products/search/details/?title=${new_title}&author=${new_author}`;
 
   fetch(urlDB)
     .then((response) => response.json())
