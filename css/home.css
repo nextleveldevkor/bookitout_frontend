@@ -10,4 +10,20 @@
 }
 
 .notice {
+  color: white;
+  margin: 100px;
+}
+.notice-bar2 {
+  margin: 100px;
+}
+.between-hr {
+  margin-bottom: 7px;
+  font-size: 40px;
+  text-align: center;
+}
+.upper-font {
+  font-size: 23px;
+}
+.up-font {
+  font-size: 30px;
 }
