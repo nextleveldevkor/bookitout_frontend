@@ -108,6 +108,9 @@ p {
   transform: scale(1.05);
 }
 
+a:hover {
+  cursor: pointer;
+}
 .search-title {
   color: #ad84c6;
 }
@@ -143,8 +146,6 @@ p {
 }
 
 .title {
-  text-align: center;
-  margin: 0 auto 80px;
   position: relative;
   line-height: 60px;
   color: #555;
