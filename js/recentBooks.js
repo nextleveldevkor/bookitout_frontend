@@ -47,7 +47,7 @@ function createBooks(data) {
 }
 
 function getData() {
-  fetch("http://localhost:8000/products/")
+  fetch("http://101.101.210.22:8000/products/")
     .then((response) => response.json())
     .then((data) =>
       data.results.forEach(function (item) {

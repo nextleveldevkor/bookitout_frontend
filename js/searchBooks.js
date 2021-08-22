@@ -98,8 +98,8 @@ function displayResults(arr) {
   return arr;
 }
 
-const url = `http://localhost:8000/libraries/`;
-const url2 = `http://localhost:8000/products/search/?title__contains=`;
+const url = `http://101.101.210.22:8000/libraries/`;
+const url2 = `http://101.101.210.22:8000/products/search/?title__contains=`;
 
 // function getBooksDB(title, library) {
 function getBooksDB(title) {

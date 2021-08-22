@@ -8,7 +8,7 @@ function addBook(e) {
   const bookCondition = document.querySelector(".condition").value;
   const bookPrice = document.querySelector(".price").value;
   const bookContact = document.querySelector(".contact").value;
-  const url = "http://127.0.0.1:8000/products/";
+  const url = "http://101.101.210.22:8000/products/";
   fetch(url, {
     method: "POST",
     headers: {
